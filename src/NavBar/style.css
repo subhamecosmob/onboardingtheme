@@ -1,0 +1,89 @@
+.navbar {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	/* justify-content: center; */
+	flex-direction: column;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.navLink {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	padding: 0.5rem 0;
+	position: relative;
+}
+
+.navLink span {
+	flex: 1;
+}
+
+ul {
+	width: 100%;
+}
+.heading {
+	padding: 1rem;
+	width: 70%;
+	height: 10rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.dots {
+	background: black;
+	width: 0.4rem;
+	height: 0.4rem;
+	border-radius: 50%;
+	position: relative;
+	margin: 1rem 0px;
+}
+
+.dots::after {
+	content: " ";
+	position: absolute;
+	left: 1.5rem;
+	background: black;
+	width: 0.4rem;
+	height: 0.4rem;
+	border-radius: 50%;
+}
+
+.navitem-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.activeLink {
+	overflow: hidden;
+}
+
+.activeLink::before {
+	content: "";
+	width: 0.4rem;
+	height: 100%;
+	background: black;
+	position: absolute;
+
+	animation: slideAnimation 250ms ease-in-out;
+	left: 1px;
+	border-radius: 4px;
+}
+
+@keyframes slideAnimation {
+	0% {
+		transform: translateY(-10rem);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
