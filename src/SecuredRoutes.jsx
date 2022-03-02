@@ -11,8 +11,6 @@ const SecuredRoutes = () => {
 		<>
 			<NavBar />
 			<Outlet />
-
-			<NavBar />
 		</>
 	) : (
 		<Navigate to='/Login' />
