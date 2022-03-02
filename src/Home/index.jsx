@@ -10,8 +10,10 @@ import "./home.css";
 import { Box } from "@mui/system";
 import OverView from "./OverView";
 import Stats from "./Stats";
+import useStore from "../hooks/useStore";
 
 const Home = () => {
+	const authenticatedUser = useStore((state) => state.authenticatedUser);
 	return (
 		<>
 			<div className='header'>
@@ -44,7 +46,7 @@ const Home = () => {
 							<Typography
 								variant='h4'
 								sx={{ fontFamily: "unset", fontWeight: "900" }}>
-								Hello shubham
+								Hello {authenticatedUser.name}
 							</Typography>
 							<Typography
 								variant='h6'
